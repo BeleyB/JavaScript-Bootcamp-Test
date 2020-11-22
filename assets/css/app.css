@@ -1,0 +1,78 @@
+
+
+.app {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.screen_saver {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(0,0,0,0);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+    background-image: url('../img/bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10;
+}
+
+
+.screen_saver img {
+    position: absolute;
+    object-fit: contain;
+    opacity: 0;
+    visibility: hidden;
+    height: auto;
+    display: block;
+}
+.screen_saver img.active {
+    visibility: visible;
+    animation: imageAnimation 4s ease-in-out 1;
+}
+
+.screen_saver.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
