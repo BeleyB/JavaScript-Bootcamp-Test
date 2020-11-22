@@ -79,7 +79,7 @@ function screenSaver(el) {
 
     window.addEventListener('pointermove', onScreenEvent);
     window.addEventListener('keyup', onScreenEvent);
-    window.addEventListener('whell', onScreenEvent);
+    window.addEventListener('wheel', onScreenEvent);
     window.addEventListener('click', onScreenEvent);
 
     onScreenEvent();
